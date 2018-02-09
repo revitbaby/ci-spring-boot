@@ -49,6 +49,13 @@ public class TaskRepositoryTest {
 	}
 	
 	@Test
+	public void shouldBeSuccessToSave2() {
+		Task task = new Task("Test");
+		taskRepository.save(task);
+		Assert.assertTrue(taskRepository.count() == 1);
+	}
+	
+	@Test
 	public void shouldListAll() {
 		Task task = new Task("Test");
 		taskRepository.save(task);
